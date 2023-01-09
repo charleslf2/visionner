@@ -11,10 +11,12 @@ console=Console()
 
 def Vision(path):
 
-    if path.is_dir():
-        pass
-    else:
+    isDirectory = os.path.isdir(path)
+    print(isDirectory)
+    if isDirectory==False:
         raise TypeError("The path should be a directory")
+    else:
+        print("your path is a directory")
 
     dataset=[]
     
@@ -34,7 +36,7 @@ def Vision(path):
 
     # show the datset with matplotlib
 
-    plt.imshow(dataset[: 10])
+    plt.imshow(dataset[10])
     plt.show()
 
     return dataset
