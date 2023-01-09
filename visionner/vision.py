@@ -10,6 +10,30 @@ console=Console()
 
 
 def Vision(path, size=(28, 28), normalize=True):
+    """
+    This function take an image dataset directory and transform it into a numpy array
+
+    Params
+    ======
+    path : a path that of your image dataset || should be a directory
+
+    size : (28, 28) by default || specify the Width and the Heigh of your images  || should be a tuple 
+
+    normlize : True by default || Normalize your image dataset || should be True or False 
+
+    Usage
+    =====
+    #import usefull package
+    >>> from visionner import Vision
+    >>> import matplotlib.pyplot as plt 
+
+    >>> your_dataset=Vision("path/to/your/dataset/", size=(28, 28), normlize=True)
+
+    # visualize the first image
+    >>> plt.imshow(dog_dataset[0])
+    >>> plt.show()
+    
+    """
 
     isDirectory = os.path.isdir(path)
 
