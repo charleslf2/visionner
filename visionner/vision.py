@@ -28,7 +28,7 @@ def Vision(path, size=(28, 28), normalize=True):
     >>> import matplotlib.pyplot as plt 
 
     ### basic usage
-    >>> your_dataset=Vision("path/to/your/dataset/", size=(28, 28), normlize=True)
+    >>> your_dataset=Vision("path/to/your/dataset/", size=(28, 28), normalize=True)
 
     ### visualize the first image
     >>> plt.imshow(your_dataset[0])
