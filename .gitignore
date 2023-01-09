@@ -1,2 +1,4 @@
 vienv/
 visionner.egg-info/
+build/
+dist/
