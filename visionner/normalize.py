@@ -10,11 +10,12 @@ def Normlization(dataset, dataset_shape):
 
 
     image_heigh_size=dataset_shape[1]
-    print("image hiegh size", image_heigh_size)
+
+    #print("image hiegh size", image_heigh_size)
 
     image_chanel=dataset.shape[3]
 
-    print("Image chanel",image_chanel )
+    #print("Image chanel",image_chanel )
 
     # reshape
 
@@ -27,16 +28,18 @@ def Normlization(dataset, dataset_shape):
 
             
     # print the dataset shape 
-    console.print(Panel.fit(f"{normalize_dataset_shape}", title="Normalize dataset shape", title_align="center"))
-    print("Normalize_dataset\n", normalize_dataset)
+    console.print(Panel.fit(f"{normalize_dataset_shape}", title="You Normalized dataset shape", title_align="center"))
+
+
+    #print("Normalize_dataset\n", normalize_dataset)
 
     # show the datset with matplotlib
-
+    plt.figure()
     for i in range(10):
         plt.subplot(2, 5, i + 1)
-        plt.title("Normalize dataset")
-        #plt.colorbar()
+        plt.suptitle("10 first image in your Normalized dataset")
         plt.imshow(normalize_dataset[i])
-        plt.show()
+
+    plt.show()
     
     return normalize_dataset

@@ -12,11 +12,14 @@ console=Console()
 def Vision(path, size=(28, 28), normalize=True):
 
     isDirectory = os.path.isdir(path)
-    print(isDirectory)
+
+    #print(isDirectory)
+
     if isDirectory==False:
         raise TypeError("The path should be a directory")
     else:
-        print("your path is a directory")
+        pass
+        #print("your path is a directory")
 
     dataset=[]
     
@@ -31,17 +34,10 @@ def Vision(path, size=(28, 28), normalize=True):
     dataset_shape=dataset.shape
 
 
-    console.print(Panel.fit(f"{dataset_shape}", title="your dataset shape", title_align="center"))
-    print("Dataset\n", dataset)
+    console.print(Panel.fit(f"{dataset_shape}", title="Your dataset shape", title_align="center"))
 
-    for i in range(10):
-        plt.subplot(2, 5, i + 1)
-        plt.title("dataset")
-        #plt.colorbar()
-        plt.imshow(dataset[i])
-  
-    plt.show()
 
+    #print("Dataset\n", dataset)
 
     # Normalize
     if normalize==True:
@@ -49,9 +45,14 @@ def Vision(path, size=(28, 28), normalize=True):
         dataset=Normlization(dataset, dataset_shape)
 
     else:
-        pass
 
+        for i in range(10):
+            plt.subplot(2, 5, i + 1)
+            plt.suptitle("20 fisrt image in your Dataset")
+            plt.imshow(dataset[i])
 
-    
+        plt.title("dataset")
+        plt.show()
+
 
     return dataset
