@@ -43,3 +43,18 @@ Notice a bug ? let us know. Thanks you
 ### Author
 + Main Maitainer : Charles TCHANAKE
 + email : datadevfernolf@gmail.com 
+
+### Note 
+
+if you get an unicode erro like  this :
+
+```
+SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
+
+```
+
+add **r** at the begining of your path like this
+
+```python
+>>> your_dataset=Vision(r"path/to/your/dataset/", size=(28, 28), normalize=True)
+```
