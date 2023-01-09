@@ -23,16 +23,17 @@ def Vision(path, size=(28, 28), normalize=True):
 
     Usage
     =====
-    #import usefull package
+    ### import usefull package
     >>> from visionner import Vision
     >>> import matplotlib.pyplot as plt 
 
+    ### basic usage
     >>> your_dataset=Vision("path/to/your/dataset/", size=(28, 28), normlize=True)
 
-    # visualize the first image
-    >>> plt.imshow(dog_dataset[0])
+    ### visualize the first image
+    >>> plt.imshow(your_dataset[0])
     >>> plt.show()
-    
+
     """
 
     isDirectory = os.path.isdir(path)
