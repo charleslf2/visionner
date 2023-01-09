@@ -46,14 +46,14 @@ Notice a bug ? let us know. Thanks you
 
 ### Note 
 
-if you get an unicode erro like  this :
+if you get an unicode error like  this :
 
 ```
 SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
 
 ```
 
-add **r** at the begining of your path like this
+add **r** at the begining of your path like this:
 
 ```python
 >>> your_dataset=Vision(r"path/to/your/dataset/", size=(28, 28), normalize=True)
