@@ -1,12 +1,14 @@
 # visionner
-Visionner convert your image dataset into a numpy array ; more suitable for computer vision tasks.
+Visionner is a real world computer vision toolkit
 
 #### Purpose of the package
-+  The purpose of this package is to convert your image dataset into a numpy array wich is more suitable for Image processing , deep learning and computer vision tasks.
++ The purpose of this package is to provide machine learning engineer a real world computer vision toolkit
 
 
 #### Features
-+  Convert image folder into numpy array
++ Convert image folder into numpy array
++ Normalize the dataset
++ Split the trainset and the testset
 
 
 ### Getting Started
@@ -19,17 +21,24 @@ The package can be found on pypi hence you can install it using pip
 pip install visionner
 
 ```
+
 ### Usage
 ```python
 
 ### import usefull package
->>> from visionner import Vision
+>>> from visionner.Dataset.DatasetManager import DatasetImporter, DatasetNormalizer, TrainTestSpliter
 >>> import matplotlib.pyplot as plt 
 
-### basic usage
->>> your_dataset=Vision("path/to/your/dataset/", size=(28, 28), normalize=True)
+### import your dataset
+>>> your_dataset=DatasetImporter("path/to/your/dataset/", size=(28, 28))
 
-### visualize the first image
+### normalize your dataset
+>>> your_normalized_dataset=DatasetNormalizer(your_dataset)
+
+### create a trainset and a testset
+>>>x_train, x_test=TrainTestSpliter(dataset, test_size=0.2)
+
+### visualize the first image of your dataset
 >>> plt.imshow(your_dataset[0])
 >>> plt.show()
 
