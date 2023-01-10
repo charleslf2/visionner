@@ -9,7 +9,8 @@ console=Console()
 
 
 
-def display(dataset, dataset_shape, title):
+def display(dataset, title):
+        dataset_shape=dataset.shape
         console.print(Panel.fit(f"{dataset_shape}", title=f"{title}", title_align="center"))
 
         plt.figure()
@@ -36,13 +37,16 @@ def DatasetImporter(path, size=(28, 28)):
     Usage
     =====
     ### import usefull package
+
     >>> from visionner.Dataset import DatasetManager
     >>> import matplotlib.pyplot as plt 
 
     ### basic usage
+
     >>> your_dataset=DatasetManager.DatasetImporter("path/to/your/dataset/", size=(28, 28))
 
     ### visualize the first image
+
     >>> plt.imshow(your_dataset[0])
     >>> plt.show()
 
@@ -64,17 +68,13 @@ def DatasetImporter(path, size=(28, 28)):
 
     dataset=np.array(dataset)
 
-    dataset_shape=dataset.shape
-
     #display
-    display(dataset, dataset_shape, title="Your dataset shape")
+    display(dataset, title="Your dataset shape")
 
     return dataset
     
 
     
-
-
    
 
 def DatasetNormalizer(dataset):
@@ -92,37 +92,70 @@ def DatasetNormalizer(dataset):
     >>> from visionner.Dataset import DatasetManager
 
     ### normalize your dataset
+
     >>> your_normalized_dataset=DatasetManager.DatasetNormalizer(dataset)
 
     ### visualize your dataset
+
     >>> print(your_normalized_dataset) 
      
     """
 
     dataset_shape=dataset.shape
+
     image_heigh_size=dataset_shape[1]
 
     image_chanel=dataset.shape[3]
 
     normalize_dataset=np.reshape(dataset, [-1, image_heigh_size, image_heigh_size, image_chanel])
 
-    normalize_dataset=dataset.astype("float32")/250
-    
-    normalize_dataset_shape=normalize_dataset.shape
+    normalize_dataset=dataset.astype("float32")/255
+
     # display
-    display(normalize_dataset, normalize_dataset_shape, title="Your normalized dataset shape" )
+    display(normalize_dataset, title="Your normalized dataset shape" )
     return normalize_dataset
 
 
 
 
-def TrainTestSpliter(dataset, dataset_shape, test_size):
-        
+def TrainTestSpliter(dataset, test_size=0.2):
+    """
+    This function return the x_train and the y_train of your dataset
+
+    Params:
+    =======
+    dataset : a numpy array image dataset
+
+    test_size : the size of your x_test
+
+    Usage:
+    ======
+    ### import useful package
+
+    >>> import visionner.Dataset.DatasetManager import TrainTestSpliter
+
+    ### split your dataset
+
+    >>> x_train, x_test=TrainTestSpliter(dataset, test_size=0.2)
+    
+    """
+    dataset_shape=dataset.shape
+
     x_test_number=(dataset_shape[0]*test_size)
+
+    print("X_test number", x_test_number)
+    x_test_number=int(x_test_number)
+
+    print("X_test number", x_test_number)
     x_test=dataset[: x_test_number]
     x_train=dataset[x_test_number :]
 
-    print("X_test number", x_test_number)
+    
+
+    # display
+    display(x_train, title="x-train shape")
+    display(x_test, title="x-test shape")
+
     return x_train,x_test
     
 
