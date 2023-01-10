@@ -23,7 +23,8 @@ setup(
     },
     author="Charles TCHANAKE",
     author_email="datadevfernolf@gmail.com",
-    license="MIT",
+    license="Apache License 2.0",
+    keywords=["AI", "Computer vision", "Data centric"],
     classifiers=classifiers,
     install_requires=["numpy", "opencv-python", "matplotlib", "rich"],
     packages=find_packages()
