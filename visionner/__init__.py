@@ -1,1 +1,1 @@
-from visionner.Dataset import DatasetImporter
+from visionner.Dataset import DatasetManager
