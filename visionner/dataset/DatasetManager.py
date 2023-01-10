@@ -15,7 +15,7 @@ def display(dataset, dataset_shape, title):
         plt.figure()
         for i in range(10):
             plt.subplot(2, 5, i + 1)
-            plt.suptitle("10 first image in your dataset")
+            plt.suptitle("First 10 images in your dataset")
             plt.imshow(dataset[i])
 
         plt.show()
@@ -36,11 +36,11 @@ def DatasetImporter(path, size=(28, 28)):
     Usage
     =====
     ### import usefull package
-    >>> from visionner import Vision
+    >>> from visionner.Dataset import DatasetManager
     >>> import matplotlib.pyplot as plt 
 
     ### basic usage
-    >>> your_dataset=Vision("path/to/your/dataset/", size=(28, 28))
+    >>> your_dataset=DatasetManager.DatasetImporter("path/to/your/dataset/", size=(28, 28))
 
     ### visualize the first image
     >>> plt.imshow(your_dataset[0])
@@ -77,18 +77,40 @@ def DatasetImporter(path, size=(28, 28)):
 
    
 
-def DatasetNormalizer(dataset, dataset_shape):
+def DatasetNormalizer(dataset):
+    """
+    This function return a normalized version of your dataset
 
+    Params:
+    ======
+    dataset : a numpy array image dataset
+
+    Usage:
+    ======
+    ### import usefull package
+
+    >>> from visionner.Dataset import DatasetManager
+
+    ### normalize your dataset
+    >>> your_normalized_dataset=DatasetManager.DatasetNormalizer(dataset)
+
+    ### visualize your dataset
+    >>> print(your_normalized_dataset) 
+     
+    """
+
+    dataset_shape=dataset.shape
     image_heigh_size=dataset_shape[1]
 
     image_chanel=dataset.shape[3]
 
-    # reshape
-
     normalize_dataset=np.reshape(dataset, [-1, image_heigh_size, image_heigh_size, image_chanel])
 
     normalize_dataset=dataset.astype("float32")/250
-        
+    
+    normalize_dataset_shape=normalize_dataset.shape
+    # display
+    display(normalize_dataset, normalize_dataset_shape, title="Your normalized dataset shape" )
     return normalize_dataset
 
 
