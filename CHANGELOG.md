@@ -13,3 +13,4 @@ CHANGE LOG
 - Rewrite the README.md
 - Update the setup.py
 - Change the License from MIT to apache software license 
+- Add the display function
