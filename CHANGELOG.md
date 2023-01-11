@@ -14,3 +14,7 @@ CHANGE LOG
 - Update the setup.py
 - Change the License from MIT to apache software license 
 - Add the display function
+
+0.0.3 (1/11/1023)
+-----------------
+- Augment the size of the display image 
