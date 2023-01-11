@@ -64,6 +64,7 @@ def DatasetImporter(path, size=(28, 28)):
     for file_name in os.listdir(path):
         img=cv2.imread(os.path.join(path, file_name))
         img=cv2.resize(img, size)
+        img= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         dataset.append(img)
 
     dataset=np.array(dataset)
