@@ -19,3 +19,4 @@ CHANGE LOG
 -----------------
 - Augment the size of the display image 
 - Maintain image color when loading with matplotlib
+- Display the dataset info 
