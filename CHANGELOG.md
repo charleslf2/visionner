@@ -18,3 +18,4 @@ CHANGE LOG
 0.0.3 (1/11/1023)
 -----------------
 - Augment the size of the display image 
+- Maintain image color when loading with matplotlib
