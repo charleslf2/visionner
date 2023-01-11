@@ -11,7 +11,13 @@ console=Console()
 
 def display(dataset, title):
         dataset_shape=dataset.shape
-        console.print(Panel.fit(f"{dataset_shape}", title=f"{title}", title_align="center"))
+        imagenumber=dataset_shape[0]
+        width=dataset_shape[1]
+        heigh=dataset_shape[2]
+        chanel=dataset_shape[3]
+        console.print(Panel.fit
+        (f"Total Images --> {imagenumber} \nImage Width --> {width} \nImage Heigh --> {heigh} \nImage Channel --> {chanel}", 
+        title=f"{title}", title_align="center"))
 
         plt.figure(figsize=(20, 10))
         for i in range(10):
@@ -70,7 +76,7 @@ def DatasetImporter(path, size=(28, 28)):
     dataset=np.array(dataset)
 
     #display
-    display(dataset, title="Your dataset shape")
+    display(dataset, title="Your dataset info")
 
     return dataset
     
@@ -113,7 +119,7 @@ def DatasetNormalizer(dataset):
     normalize_dataset=dataset.astype("float32")/255
 
     # display
-    display(normalize_dataset, title="Your normalized dataset shape" )
+    display(normalize_dataset, title="Your normalized dataset info" )
     return normalize_dataset
 
 
