@@ -13,7 +13,7 @@ def display(dataset, title):
         dataset_shape=dataset.shape
         console.print(Panel.fit(f"{dataset_shape}", title=f"{title}", title_align="center"))
 
-        plt.figure()
+        plt.figure(figsize=(20, 10))
         for i in range(10):
             plt.subplot(2, 5, i + 1)
             plt.suptitle("First 10 images in your dataset")
