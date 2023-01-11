@@ -4,6 +4,9 @@ Visionner is a real world computer vision toolkit
 #### Purpose of the package
 + The purpose of this package is to provide machine learning engineer a real world computer vision toolkit
 
+### Warning
+
+Since Visionner still in alpha and under heavy development , expect to see many changes in the near futures.
 
 #### Features
 + Convert image folder into numpy array
