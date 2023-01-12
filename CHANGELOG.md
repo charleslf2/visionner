@@ -15,10 +15,14 @@ CHANGE LOG
 - Change the License from MIT to apache software license 
 - Add the display function
 
-0.0.3 (1/11/1023)
+0.0.3 (1/11/2023)
 -----------------
 - Augment the size of the display image 
 - Maintain image color when loading with matplotlib
 - Display the dataset info 
 - Change the function name display to Displayer 
 - Delete some debug print
+
+0.0.4 (1/12/2023)
+-----------------
+- Change the description of the package 
