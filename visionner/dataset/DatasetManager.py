@@ -9,7 +9,7 @@ console=Console()
 
 
 
-def display(dataset, title):
+def Displayer(dataset, title):
         dataset_shape=dataset.shape
         imagenumber=dataset_shape[0]
         width=dataset_shape[1]
@@ -76,7 +76,7 @@ def DatasetImporter(path, size=(28, 28)):
     dataset=np.array(dataset)
 
     #display
-    display(dataset, title="Your dataset info")
+    Displayer(dataset, title="Your dataset info")
 
     return dataset
     
@@ -119,7 +119,7 @@ def DatasetNormalizer(dataset):
     normalize_dataset=dataset.astype("float32")/255
 
     # display
-    display(normalize_dataset, title="Your normalized dataset info" )
+    Displayer(normalize_dataset, title="Your normalized dataset info" )
     return normalize_dataset
 
 
@@ -160,8 +160,8 @@ def TrainTestSpliter(dataset, test_size=0.2):
     
 
     # display
-    display(x_train, title="x-train shape")
-    display(x_test, title="x-test shape")
+    Displayer(x_train, title="x-train info")
+    Displayer(x_test, title="x-test info")
 
     return x_train,x_test
     
