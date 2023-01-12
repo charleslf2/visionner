@@ -13,7 +13,7 @@ classifiers=[
 
 setup(
     name="visionner",
-    version="0.0.2",
+    version="0.0.3",
     description="Visionner is a real world computer vision toolkit",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type='text/markdown',
