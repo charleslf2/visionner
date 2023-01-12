@@ -150,10 +150,8 @@ def TrainTestSpliter(dataset, test_size=0.2):
 
     x_test_number=(dataset_shape[0]*test_size)
 
-    print("X_test number", x_test_number)
-    x_test_number=int(x_test_number)
+    x_test_number=int(x_test_number)    
 
-    print("X_test number", x_test_number)
     x_test=dataset[: x_test_number]
     x_train=dataset[x_test_number :]
 
