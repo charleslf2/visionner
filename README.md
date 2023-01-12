@@ -1,8 +1,8 @@
 # visionner
-Visionner is a real world computer vision toolkit
+Visionner is a image dataset  toolkit
 
 #### Purpose of the package
-+ The purpose of this package is to provide machine learning engineer a real world computer vision toolkit
++ The purpose of this package is to provide machine learning engineer a image dataset toolkit
 
 ### Warning
 
