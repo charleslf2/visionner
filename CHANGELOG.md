@@ -20,4 +20,5 @@ CHANGE LOG
 - Augment the size of the display image 
 - Maintain image color when loading with matplotlib
 - Display the dataset info 
-- Change the function name display to Displayer
+- Change the function name display to Displayer 
+- Delete some debug print
