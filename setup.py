@@ -26,6 +26,6 @@ setup(
     license="Apache License 2.0",
     keywords=["AI", "Computer vision", "Data centric"],
     classifiers=classifiers,
-    install_requires=["numpy", "opencv-python", "matplotlib", "rich"],
+    install_requires=["numpy", "opencv-python", "matplotlib", "rich", "scikit-learn"],
     packages=find_packages()
 )
