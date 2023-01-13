@@ -260,4 +260,50 @@ def TrainTestSpliter(dataset, test_size=0.2):
 
     return x_train,x_test
 
+
+def DatasetSaver(dataset_name, dataset):
+    """
+    This function save your dataset in .npy
+
+    Params:
+    =======
+
+    dataset_name : The name of the saved dataset || should be string
+
+    dataset : Your dataset 
+
+    Usage:
+    ======
+
+    ### import useful package
+
+    >>> from visionner.Dataset.DatasetManager import DatasetSaver
+
+    ### save your dataset
+
+    >>> DatasetSaver("my_saved_dataset", your_dataset)
+
+    """
+    np.save(dataset_name, dataset)
+
+
+def DatasetOpener(dataset_name:str):
+    """
+    This function  open and return your saved dataset 
+
+    Params:
+    ======
+
+    dataset_name : The name of your dataset || should be a string
+
+    ### import useful package 
     
+    >>> from visionner.Dataset>DatasetManager import DatasetOpener
+
+    ### open your saved dataset
+
+    >>> my_saved_dataset=DatasetOpener("my_saved_dataset")
+
+    """
+    dataset= np.load(dataset_name)
+    return dataset
