@@ -31,19 +31,29 @@ pip install visionner
 ```python
 
 ### import usefull package
->>> from visionner.Dataset.DatasetManager import DatasetImporter, DatasetNormalizer, TrainTestSpliter
+
+>>> from visionner.Dataset.DatasetManager import DatasetImporter, DatasetNormalizer, TrainTestSpliter, SupervisedImporter
+
 >>> import matplotlib.pyplot as plt 
 
-### import your dataset
+### import your dataset (more suitable for dataset without labels)
+
 >>> your_dataset=DatasetImporter("path/to/your/dataset/", size=(28, 28))
 
+### import your supervised dataset (more suitable for dataset with labels)
+
+>>> features, labels= SupervisedImporter("path/to/your/dataset", categories=["cat", "dog"], size=(28,28))
+
 ### normalize your dataset
+
 >>> your_normalized_dataset=DatasetNormalizer(your_dataset)
 
 ### create a trainset and a testset
+
 >>>x_train, x_test=TrainTestSpliter(dataset, test_size=0.2)
 
 ### visualize the first image of your dataset
+
 >>> plt.imshow(your_dataset[0])
 >>> plt.show()
 
