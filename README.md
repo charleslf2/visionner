@@ -10,6 +10,8 @@ Since Visionner still in alpha and under heavy development , expect to see many 
 
 #### Features
 + Convert image folder into numpy array
++ Import a dataset for unsupervised learning tasks
++ Import a dataset for supervised learning tasks
 + Normalize the dataset
 + Split the trainset and the testset
 
