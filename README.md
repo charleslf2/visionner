@@ -51,7 +51,7 @@ pip install visionner
 
 ### create a trainset and a testset
 
->>>x_train, x_test=TrainTestSpliter(dataset, test_size=0.2)
+>>> x_train, x_test=TrainTestSpliter(dataset, test_size=0.2)
 
 ### visualize the first image of your dataset
 
