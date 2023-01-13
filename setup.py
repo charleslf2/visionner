@@ -13,8 +13,8 @@ classifiers=[
 
 setup(
     name="visionner",
-    version="0.0.3",
-    description="Visionner is a  image dataset  toolkit",
+    version="0.0.4",
+    description="Visionner is a image dataset  toolkit",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type='text/markdown',
     url="https://github.com/charleslf2/Visionner",
