@@ -23,4 +23,8 @@ CHANGE LOG
 - Change the function name display to Displayer 
 - Delete some debug print
 
+0.0.4 (1/12/2023)
+-----------------
+- Change the description of the package 
+- Implement train and label importer (SupervisedImporter)
 
