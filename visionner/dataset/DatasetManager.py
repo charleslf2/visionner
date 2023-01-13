@@ -4,6 +4,7 @@ import os
 import matplotlib.pyplot as plt 
 from rich.panel import Panel
 from rich.console import Console
+import random
 
 console=Console()
 
@@ -81,9 +82,65 @@ def DatasetImporter(path, size=(28, 28)):
     return dataset
     
 
-    
-   
 
+def SupervisedImporter(path, categories, size=(28, 28)):
+
+    isDirectory = os.path.isdir(path)
+    isList=type(categories)==list
+
+    if isDirectory==False:
+        raise TypeError("The 'path' argument should be a directory")
+    
+    if isList==False:
+        raise TypeError("The 'categories' argument should be a list")
+
+
+    dataset=[]
+    for category in categories:
+        dir_path=os.path.join(path, category)
+        class_num=categories.index(category)
+        for file_name in os.listdir(dir_path):
+            img=cv2.imread(os.path.join(dir_path, file_name))
+            img=cv2.resize(img, size)
+            img= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            dataset.append([img, class_num])
+
+
+    random.shuffle(dataset)
+
+    X=[]
+    y=[]
+
+    for features, label in dataset:
+        X.append(features)
+        y.append(label)
+
+    X=np.array(X)
+    
+    
+    # display features
+
+    Displayer(X, "Your dataset features info")
+
+    # display label
+   
+    label_len=len(y)
+    console.print(Panel.fit(f"Total Labels --> {label_len}", title="Your dataset Labels info", title_align="center"))
+    console.print(Panel.fit(f"{y[: 10]}", title="First 10 labels in your dataset", title_align="center"))
+
+    result=[]
+
+    for category in categories:
+        class_num=categories.index(category)
+        result.append(f"{category} --> {class_num}")
+
+    console.print(Panel.fit(f"{result}", title="Your labels indexes", title_align="center"))
+
+
+    return X, y
+    
+    
+    
 def DatasetNormalizer(dataset):
     """
     This function return a normalized version of your dataset
@@ -162,6 +219,7 @@ def TrainTestSpliter(dataset, test_size=0.2):
     Displayer(x_test, title="x-test info")
 
     return x_train,x_test
-    
+
+
 
     
