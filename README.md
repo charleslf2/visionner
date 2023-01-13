@@ -14,7 +14,8 @@ Since Visionner still in alpha and under heavy development , expect to see many 
 + Import a dataset for supervised learning tasks
 + Normalize the dataset
 + Split the trainset and the testset
-
++ Save your dataset
++ Open your dataset
 
 ### Getting Started
 The package can be found on pypi hence you can install it using pip
