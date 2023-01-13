@@ -37,7 +37,7 @@ def DatasetImporter(path, size=(28, 28)):
 
     Params
     ======
-    path : a path that of your image dataset || should be a directory
+    path : A path that of your image dataset || should be a directory
 
     size : (28, 28) by default || specify the Width and the Heigh of your images  || should be a tuple 
 
@@ -84,6 +84,19 @@ def DatasetImporter(path, size=(28, 28)):
 
 
 def SupervisedImporter(path, categories, size=(28, 28)):
+    
+    """
+    This functions help you import your dataset for supervised learning tasks
+
+    Params
+    ======
+    path : A path  of your images directory || should be a directory
+
+    categories: The list of different labels categories || should be a List
+
+    size : (28, 28) by default || specify the Width and the Heigh of your images  || should be a tuple 
+
+    """
 
     isDirectory = os.path.isdir(path)
     isList=type(categories)==list
