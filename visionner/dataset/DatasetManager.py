@@ -111,7 +111,7 @@ def SupervisedImporter(path, categories, size=(28, 28)):
     """
 
     print("Your dataset should look like this : ")
-    
+
     tree=Tree("Your Dataset directory",guide_style="bold")
 
     Category1=tree.add("Category 1")
@@ -253,14 +253,11 @@ def TrainTestSpliter(dataset, test_size=0.2):
     x_test=dataset[: x_test_number]
     x_train=dataset[x_test_number :]
 
-    
 
     # display
     Displayer(x_train, title="x-train info")
     Displayer(x_test, title="x-test info")
 
     return x_train,x_test
-
-
 
     
