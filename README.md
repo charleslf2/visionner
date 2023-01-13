@@ -75,7 +75,6 @@ pip install visionner
 
 >>> my_saved_dataset=DatasetOpener("my_saved_dataset.npy") 
 
-
 ```
 
 
