@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from rich.panel import Panel
 from rich.console import Console
 import random
+from rich.tree import Tree
+from rich import print
 
 console=Console()
 
@@ -59,7 +61,6 @@ def DatasetImporter(path, size=(28, 28)):
 
     """
 
-
     isDirectory = os.path.isdir(path)
 
     if isDirectory==False:
@@ -108,6 +109,22 @@ def SupervisedImporter(path, categories, size=(28, 28)):
     >>> features, labels=SupervisedImporter("path/to/your/dataset/", categories=["cat", "dog"], size=(28,28))
 
     """
+
+    print("Your dataset should look like this : ")
+    
+    tree=Tree("Your Dataset directory",guide_style="bold")
+
+    Category1=tree.add("Category 1")
+    Category2=tree.add("Category 2")
+    Category1.add("Image_01")
+    Category1.add("Image_02")
+    Category1.add("Image_03")
+
+    Category2.add("Image_01")
+    Category2.add("Image_02")
+    Category2.add("Image_03")
+
+    print(tree)
 
     isDirectory = os.path.isdir(path)
     isList=type(categories)==list
