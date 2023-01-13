@@ -37,7 +37,7 @@ def DatasetImporter(path, size=(28, 28)):
 
     Params
     ======
-    path : A path that of your image dataset || should be a directory
+    path : A path  of your images directory || should be a directory
 
     size : (28, 28) by default || specify the Width and the Heigh of your images  || should be a tuple 
 
