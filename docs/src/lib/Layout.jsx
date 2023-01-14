@@ -7,6 +7,7 @@ import TrainTestSpliter from "../assets/screenshoot/TrainTestSpliter.png"
 import DatasetNormalizer from '../assets/screenshoot/DatasetNormalizer.png'
 import DatasetSaver from '../assets/screenshoot/DatasetSaver.png'
 import DatasetOpener from '../assets/screenshoot/DatasetOpener.png'
+import VisualizeImage from '../assets/screenshoot/VisualizeImage.png'
 
 
 const Layout = () => {
@@ -23,16 +24,15 @@ const Layout = () => {
                 <div className={styles.showcase_01}>
 
                     <Showcase_card 
-                    title="Get your image folder ready for 
-                    unsupervised computer vision taks in 2 lines of codes"
+                    title="👉 Get your image folder ready for 
+                    unsupervised computer vision taks in 2 lines of codes 👈 "
                     src={DatasetImporter}
                     />
 
                     <Showcase_card
-                    title="Get your image folder ready for 
-                    supervised computer vision tasks in 2 lines of code"
+                    title="👀 Visualize the first image in your imported dataset 👀"
 
-                    src={SupervisedImporter}
+                    src={VisualizeImage}
                     />
 
                 </div>
@@ -40,14 +40,14 @@ const Layout = () => {
                 <div className={styles.showcase_02}>
 
                     <Showcase_card 
-                    title="Split your dataset into Trainset and 
-                    Testset in 2 lines of codes"
+                    title="🤲 Split your dataset into Trainset and 
+                    Testset in 2 lines of codes 🤲"
 
                     src={TrainTestSpliter}
                     />
 
                     <Showcase_card
-                    title="Normalized your dataset in 2 lines of codes"
+                    title="👄 Normalized your dataset in 2 lines of codes 👄"
                     src={DatasetNormalizer}
                     />
                     
@@ -56,13 +56,22 @@ const Layout = () => {
                 <div className={styles.showcase_03}>
                     
                     <Showcase_card
-                    title="Save your dataset in 2 lines of codes"
+                    title="👌 Save your dataset in 2 lines of codes 👌"
                     src={DatasetSaver}
                     />
                     
                     <Showcase_card
-                    title="Open your dataset in 2 lines of codes"
+                    title="🥽 Open your dataset in 2 lines of codes 🥽"
                     src={DatasetOpener}
+                    />
+                </div>
+
+                <div className={styles.showcase_04}>
+                    <Showcase_card
+                        title="👩🏻‍💻 Get your image folder ready for 
+                        supervised computer vision tasks in 2 lines of code 👩🏻‍💻 "
+
+                        src={SupervisedImporter}
                     />
                 </div>
 

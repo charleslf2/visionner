@@ -2,3 +2,52 @@
     border: 1px solid blue;
     width: 100%;
 }
+
+.container{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.title{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+
+}
+
+.showcase_container{
+    /* border: 1px solid; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase_01{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 20px;
+}
+
+.showcase_02{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 20px;
+}
+
+.showcase_03{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 20px;
+}
+
+.showcase_04{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 20px;
+}

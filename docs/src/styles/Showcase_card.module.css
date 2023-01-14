@@ -1,3 +1,15 @@
-.container{
+/* .container{
     border: 1px solid red;
+
+} */
+
+.title{
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.image{
+    margin-top: 10px;
 }

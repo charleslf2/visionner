@@ -4,9 +4,9 @@ import styles from "../styles/Showcase_card.module.css"
 const Showcase_card = (props) => {
   return (
     <div className={styles.container}>
-        <div className={styles.title}>
-            <p>{props.title}</p>
-            <img src={props.src}/>
+        <div className={styles.card}>
+            <p className={styles.title}>{props.title}</p>
+            <img src={props.src} className={styles.image}/>
         </div>
     </div>
   )
