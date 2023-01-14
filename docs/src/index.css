@@ -11,4 +11,10 @@
 
 body{
   background-color:#f6f6f9 ;
+  color: #232323;
+}
+
+a{
+  text-decoration: none;
+  color: #232323;
 }

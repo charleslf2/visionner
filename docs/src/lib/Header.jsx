@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "../styles/Header.module.css"
-
+import {FaCopy} from 'react-icons/fa'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 const Header = () => {
   return (
@@ -11,18 +12,27 @@ const Header = () => {
         </div>
 
         <div className={styles.slogan}>
-            <h2>Your Image dataset toolkit</h2>
+            <p>Your Image dataset toolkit 😍 </p>
         </div>
 
         <div className={styles.CTA}>
-              <div>
-                pip install visionner
+
+              <div className={styles.install}>
+
+                <p>pip install visionner</p>
+                <CopyToClipboard text="pip install visionner">
+                  <button><FaCopy/></button>
+                </CopyToClipboard>
+
               </div>
 
 
-              <div>
+              <a  href='https://github.com/charleslf2/Visionner'target="_blank"
+               className={styles.github}>
                 Github
-              </div>
+              </a>
+                
+              
         </div>
     </div>
   )
