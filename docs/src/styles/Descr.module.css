@@ -22,3 +22,16 @@
     height: 80px;
     font-size: 1rem;
 }
+
+/* media responsivness */
+
+@media only screen and (max-width: 600px) {
+    .content{
+        /* border: 1px solid; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
