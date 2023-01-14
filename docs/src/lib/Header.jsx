@@ -31,8 +31,7 @@ const Header = () => {
                className={styles.github}>
                 Github
               </a>
-                
-              
+             
         </div>
     </div>
   )
