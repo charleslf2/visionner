@@ -1,14 +1,15 @@
 # visionner
-Visionner is a image dataset  toolkit
+Visionner , your image dataset toolkit
 
 #### Purpose of the package
-+ The purpose of this package is to provide machine learning engineer a image dataset toolkit
++ The purpose of this package is to help machine learning engineer, Import , Normalize, Save, Open,  etc. Their image dataset more easly.
 
 ### Warning
 
 Since Visionner still in alpha and under heavy development , expect to see many changes in the near futures.
 
 #### Features
+
 + Convert image folder into numpy array
 + Import a dataset for unsupervised learning tasks
 + Import a dataset for supervised learning tasks
@@ -18,6 +19,7 @@ Since Visionner still in alpha and under heavy development , expect to see many 
 + Open your dataset
 
 ### Getting Started
+
 The package can be found on pypi hence you can install it using pip
 
 #### Installation
@@ -79,10 +81,12 @@ pip install visionner
 
 
 ### Contribution
+
 Contribution are welcome.
 Notice a bug ? let us know. Thanks you
 
 ### Author
+
 + Main Maitainer : Charles TCHANAKE
 + email : datadevfernolf@gmail.com 
 
