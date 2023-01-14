@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../src/lib/Header'
 import styles from "../src/App.module.css"
 import Description from './lib/Description'
+import Layout from './lib/Layout'
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
 
         <Header/>
         <Description/>
+        <Layout/>
 
       </div>
 
