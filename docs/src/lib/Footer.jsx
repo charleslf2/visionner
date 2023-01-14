@@ -4,7 +4,7 @@ import styles from '../styles/Footer.module.css'
 const Footer = () => {
   return (
     <div className={styles.container}>
-        Footer
+        build with ❤️ by Visionner &copy; 2023
     </div>
   )
 }
