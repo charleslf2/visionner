@@ -1,6 +1,6 @@
 
 .container{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -72,4 +72,32 @@
 
 .github:hover{
     background-color: #41f1b6;
+}
+
+
+/* MEDIA QUERRY */
+
+@media only screen and (max-width: 600px) {
+   .logo{
+    /* border: 1px solid; */
+    font-size: 1rem;
+    width: 50%;
+   }
+   .logo span{
+    /* border: 1px solid; */
+    font-size: 0.75rem;
+    width: 80%;
+   }
+   .slogan{
+    font-size: 1rem;
+   }
+
+   .install{
+    width: 100px;
+   }
+   
+   .install p {
+        font-size: 0.7rem;
+        display: flex;
+    }
 }
