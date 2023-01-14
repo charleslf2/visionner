@@ -1,0 +1,23 @@
+
+.container{
+    border: 1px solid red;
+    width: 100%;
+    height: 20%;
+}
+
+
+.logo{
+    border: 1px solid ;
+    display: flex;
+}
+
+.slogan{
+    border: 1px solid;
+    font-size: 0.7rem;
+}
+
+.CTA{
+    border: 1px solid;
+    display: flex;
+    gap: 5%;
+}

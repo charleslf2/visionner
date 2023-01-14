@@ -1,0 +1,19 @@
+
+.wrapper{
+  border: 1px solid;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container{
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
