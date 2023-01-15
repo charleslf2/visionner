@@ -35,7 +35,7 @@
         font-size: 0.7rem;
     }
     .image{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 85%;
         height: 85%;
         display: flex;

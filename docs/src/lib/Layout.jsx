@@ -17,7 +17,7 @@ const Layout = () => {
         
         <div className={styles.container}>
 
-            <div className={styles.title}>What visionner can do for you ?</div>
+            <div className={styles.title}><h2> What visionner can do for you ?</h2></div>
 
             <div className={styles.showcase_container}>
 

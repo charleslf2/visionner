@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.75rem;
+    font-size: 1rem;
 
 }
 
@@ -54,12 +54,11 @@
 
 @media only screen and (max-width: 600px) {
     .title{
-        font-size: 1rem;
+        font-size: 0.90rem;
     }
 
     .showcase_01{
         flex-direction: column;
-        align-items: center;
     }
     .showcase_02{
         flex-direction: column;

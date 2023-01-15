@@ -9,8 +9,8 @@ const Description = () => {
         <h2 className={styles.title}>About Visionner ?</h2>
 
         <p className={styles.content}>
-          <p>Visionner (<span>from the french , that refer to technical looking</span>)</p>
-          <p>Is a python package that help you start your next computer vision project with confidence.</p>
+          <p>Visionner (<span>from french , that refer to technical looking</span>)</p>
+          <p>Is a python package that help you start your next computer vision project with confidence.🚀</p>
         
         </p>
 
