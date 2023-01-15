@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "../styles/Header.module.css"
-import {FaCopy} from 'react-icons/fa'
+import {FaCopy, FaExternalLinkAlt} from 'react-icons/fa'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 const Header = () => {
@@ -21,7 +21,7 @@ const Header = () => {
 
                 <p>pip install visionner</p>
                 <CopyToClipboard text="pip install visionner">
-                  <button><FaCopy/></button>
+                  <button><FaCopy size={20}/></button>
                 </CopyToClipboard>
 
               </div>
@@ -30,6 +30,7 @@ const Header = () => {
               <a  href='https://github.com/charleslf2/Visionner'target="_blank"
                className={styles.github}>
                 Github
+                <FaExternalLinkAlt/>
               </a>
              
         </div>
