@@ -51,3 +51,23 @@
     gap: 10%;
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .title{
+        font-size: 1rem;
+    }
+
+    .showcase_01{
+        flex-direction: column;
+        align-items: center;
+    }
+    .showcase_02{
+        flex-direction: column;
+    }
+    .showcase_03{
+        flex-direction: column;
+    }
+    .showcase_04{
+        flex-direction: column;
+    }
+}
