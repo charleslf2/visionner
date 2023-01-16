@@ -33,3 +33,12 @@ CHANGE LOG
 - Save dataset 
 - Open dataset
 
+0.0.4 (1/14/2023)
+-----------------
+- Adding official homepage
+
+0.0.5 (1/15/2023)
+-----------------
+- Adding official homepage
+- delete scikit-learn to install-requires
+- adding more project url
