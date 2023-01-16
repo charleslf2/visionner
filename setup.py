@@ -24,7 +24,7 @@ setup(
     author="Charles TCHANAKE",
     author_email="datadevfernolf@gmail.com",
     license="Apache License 2.0",
-    keywords=["AI", "Computer vision", "Data centric"],
+    keywords=["AI", "Computer vision", "Data centric", "dataset", "Image"],
     classifiers=classifiers,
     install_requires=["numpy", "opencv-python", "matplotlib", "rich", "scikit-learn"],
     packages=find_packages()
