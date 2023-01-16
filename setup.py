@@ -13,13 +13,14 @@ classifiers=[
 
 setup(
     name="visionner",
-    version="0.0.4",
+    version="0.0.5",
     description="Visionner is a image dataset  toolkit",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type='text/markdown',
-    url="https://github.com/charleslf2/Visionner",
+    url="https://charleslf2.github.io/Visionner/",
     project_urls={
-        "Bug Tracker":"https://github.com/charleslf2/Visionner/issues"
+        "Bug Tracker":"https://github.com/charleslf2/Visionner/issues",
+        "Docs":"https://github.com/charleslf2/Visionner",
     },
     author="Charles TCHANAKE",
     author_email="datadevfernolf@gmail.com",
