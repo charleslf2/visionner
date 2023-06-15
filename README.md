@@ -1,3 +1,9 @@
+# Installation
+- put the visionner.py file in your directory
+  
+- install the requirements.txt 
+
+# Usage
 ```bash
 pip install -r requirements.txt
 ```
