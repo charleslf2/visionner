@@ -1,4 +1,4 @@
-"""bash
+```bash
 ### import your dataset (more suitable for dataset without labels)
 
 >>> from visionner import DatasetImporter
@@ -41,4 +41,4 @@
 >>> from visionner import DatasetOpener
 
 >>> my_saved_dataset=DatasetOpener("my_saved_dataset.npy") 
-"""
+```
