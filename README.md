@@ -1,4 +1,7 @@
 ```bash
+pip install -r requirements.txt
+```
+```python3
 ### import your dataset (more suitable for dataset without labels)
 
 >>> from visionner import DatasetImporter
