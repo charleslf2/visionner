@@ -146,19 +146,18 @@ def SupervisedImporter(path, categories, size=(28, 28)):
     
 def DatasetNormalizer(dataset):
 
-    dataset_shape=dataset.shape
 
-    image_heigh_size=dataset_shape[1]
+    img_row=dataset.shape[1]
+    img_col=dataset.shape[2]
+    channel=dataset.shape[3]
 
-    image_chanel=dataset.shape[3]
+    dataset=dataset.astype('float32')/255
 
-    normalize_dataset=np.reshape(dataset, [-1, image_heigh_size, image_heigh_size, image_chanel])
-
-    normalize_dataset=dataset.astype("float32")/255
+    norm_dataset=dataset.reshape(dataset.shape[0], img_row, img_col, channel)
 
     # display
-    Displayer(normalize_dataset, title="Your normalized dataset info" )
-    return normalize_dataset
+    Displayer(norm_dataset, title="Your normalized dataset info" )
+    return norm_dataset
 
 
 
