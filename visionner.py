@@ -30,6 +30,7 @@ def Displayer(dataset, title):
 
         plt.show()
 
+
 def issupported(path):
     issupported=True
     if path.endswith(('.jpg','.jpeg','.png','.JPG')):
@@ -37,7 +38,6 @@ def issupported(path):
     else:
         issupported=False
     return issupported
-
 
 
 def DatasetImporter(path, size=(28, 28)):
@@ -49,8 +49,8 @@ def DatasetImporter(path, size=(28, 28)):
 
     dataset=[]
         
-    for file_name in os.listdir(path):
 
+    for file_name in os.listdir(path):
         if issupported(file_name):
             img=cv2.imread(os.path.join(path, file_name))
             img=cv2.resize(img, size)
@@ -101,7 +101,7 @@ def SupervisedImporter(path, categories, size=(28, 28)):
         dir_path=os.path.join(path, category)
         class_num=categories.index(category)
         for file_name in os.listdir(dir_path):
-            if issupproted(file_name):
+            if issupported(file_name):
                 img=cv2.imread(os.path.join(dir_path, file_name))
                 img=cv2.resize(img, size)
                 img= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -164,29 +164,50 @@ def DatasetNormalizer(dataset):
 
 def TrainTestSpliter(dataset, test_size=0.2):
 
-    dataset_shape=dataset.shape
+    isList=type(dataset)==list
+    
+    dataset_shape=0
 
-    x_test_number=(dataset_shape[0]*test_size)
+    if isList==True:
 
-    x_test_number=int(x_test_number)    
+        dataset_shape=len(dataset)
 
-    x_test=dataset[: x_test_number]
-    x_train=dataset[x_test_number :]
+        print("dataset shape =",dataset_shape)
+
+        x_test_number=(dataset_shape*test_size)
+
+        x_test_number=int(x_test_number)    
+
+        x_test=dataset[: x_test_number]
+
+        x_train=dataset[x_test_number :]
 
 
-    # display
-    Displayer(x_train, title="x-train info")
-    Displayer(x_test, title="x-test info")
+    else:
+        dataset_shape=dataset.shape
+
+
+        print("dataset shape =",dataset_shape)
+
+        x_test_number=(dataset_shape[0]*test_size)
+
+        x_test_number=int(x_test_number)    
+
+        x_test=dataset[: x_test_number]
+
+        x_train=dataset[x_test_number :]
+
+        # display
+        Displayer(x_train, title="x-train info")
+        Displayer(x_test, title="x-test info")
 
     return x_train,x_test
 
 
 def DatasetSaver(dataset_name, dataset):
-
-   np.save(dataset_name, dataset)
+        np.save(dataset_name, dataset)
 
 
 def DatasetOpener(dataset_name:str):
-
    dataset= np.load(dataset_name)
    return dataset
