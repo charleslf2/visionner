@@ -30,6 +30,14 @@ def Displayer(dataset, title):
 
         plt.show()
 
+def issupported(path):
+    issupported=True
+    if path.endswith(('.jpg','.jpeg','.png','.JPG')):
+        issupported=True
+    else:
+        issupported=False
+    return issupported
+
 
 
 def DatasetImporter(path, size=(28, 28)):
@@ -41,12 +49,15 @@ def DatasetImporter(path, size=(28, 28)):
 
     dataset=[]
         
-
     for file_name in os.listdir(path):
-        img=cv2.imread(os.path.join(path, file_name))
-        img=cv2.resize(img, size)
-        img= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        dataset.append(img)
+
+        if issupported(file_name):
+            img=cv2.imread(os.path.join(path, file_name))
+            img=cv2.resize(img, size)
+            img= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            dataset.append(img)
+        else:
+            pass
 
     dataset=np.array(dataset)
 
@@ -90,10 +101,13 @@ def SupervisedImporter(path, categories, size=(28, 28)):
         dir_path=os.path.join(path, category)
         class_num=categories.index(category)
         for file_name in os.listdir(dir_path):
-            img=cv2.imread(os.path.join(dir_path, file_name))
-            img=cv2.resize(img, size)
-            img= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            dataset.append([img, class_num])
+            if issupproted(file_name):
+                img=cv2.imread(os.path.join(dir_path, file_name))
+                img=cv2.resize(img, size)
+                img= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                dataset.append([img, class_num])
+            else:
+                pass
 
 
     random.shuffle(dataset)
