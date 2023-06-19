@@ -23,21 +23,41 @@ def Displayer(dataset, title):
         title=f"{title}", title_align="center"))
 
         plt.figure(figsize=(20, 10))
-        for i in range(10):
-            plt.subplot(2, 5, i + 1)
-            plt.suptitle("First 10 images in your dataset")
-            plt.imshow(dataset[i])
 
-        plt.show()
+        if imagenumber>10:
+            for i in range(10):
+                plt.subplot(2, 5, i + 1)
+                plt.suptitle("First 10 images in your dataset")
+                plt.imshow(dataset[i])
+
+            plt.show()
+
+        elif imagenumber<1:
+            plt.imshow(dataset[1])
+            plt.show()
 
 
 def issupported(path):
     issupported=True
-    if path.endswith(('.jpg','.jpeg','.png','.JPG')):
+    filename,file_ext=os.path.splitext(path)
+    support_list=['.jpg','.jpeg','.png','.JPG','.jfif']
+
+    if file_ext in support_list:
         issupported=True
     else:
+        print(f"{file_ext} is not supported" )
         issupported=False
     return issupported
+
+
+def reshape_it(dataset):
+    if len(dataset.shape)==1:
+        dataset=np.reshape(dataset,
+                   (1,dataset.shape[0],dataset.shape[1],dataset.shape[2]))
+        print(dataset.shape)
+    else:
+        pass
+    return dataset
 
 
 def DatasetImporter(path, size=(28, 28)):
@@ -60,6 +80,8 @@ def DatasetImporter(path, size=(28, 28)):
             pass
 
     dataset=np.array(dataset)
+    
+    print(dataset.shape)
 
     #display
     Displayer(dataset, title="Your dataset info")
