@@ -1,11 +1,15 @@
 # Installation
-- put the visionner.py file in your directory
-  
-- install the requirements.txt 
+- step 1 
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/charleslf2/visionner
+```  
+- step 2 
+
+```bash
+py setup.py install
 ```
+
 
 # Usage
 ```python3
