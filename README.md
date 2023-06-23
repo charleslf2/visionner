@@ -12,15 +12,16 @@ py setup.py install
 
 
 # Usage
-```python3
-### import your dataset (more suitable for dataset without labels)
 
->>> from visionner import DatasetImporter
+```python3
+
+>>> from visionner.core import DatasetImporter
 
 >>> your_dataset=DatasetImporter("path/to/your/dataset/", size=(28, 28))
 
-### import your supervised dataset (more suitable for dataset with labels)
+```
 
+```python3
 >>> from visionner import SupervisedImporter
 
 >>> features, labels= SupervisedImporter("path/to/your/dataset", categories=["cat", "dog"], size=(28,28))
