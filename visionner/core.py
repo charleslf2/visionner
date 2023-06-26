@@ -228,7 +228,8 @@ def TrainTestSpliter(dataset, test_size=0.2):
 def DatasetSaver(dataset_name, dataset):
         np.save(dataset_name, dataset)
 
+       
 
 def DatasetOpener(dataset_name:str):
-   dataset= np.load(dataset_name)
+   dataset= np.load(dataset_name + ".npy")
    return dataset
